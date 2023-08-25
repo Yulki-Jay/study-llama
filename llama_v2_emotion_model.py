@@ -17,20 +17,24 @@ class MyLLamaModel(pl.LightningModule):
         self.model.lm_head = nn.Linear(infeatures,outfeatures)
     
     def training_step(self,batch, batch_idx):
-        x, y = batch
-        y_hat = self.model(x)
+        # batch = [text,label,input_ids,attention_mask]
+        text,label,inputs_ids,attention_mask = batch
+        y = label
+        y_hat = self.model(inputs_id=inputs_ids,attention_mask=attention_mask)
         loss = F.cross_entropy(y_hat, y)
         self.log('train_loss', loss)
         return loss
     def validation_step(self,batch, batch_idx):
-        x, y = batch
-        y_hat = self.model(x)
+        text,label,inputs_ids,attention_mask = batch
+        y = label
+        y_hat = self.model(inputs_id=inputs_ids,attention_mask=attention_mask)
         loss = F.cross_entropy(y_hat, y)
         self.log('val_loss', loss)
         return loss
     def test_step(self,batch, batch_idx):
-        x, y = batch
-        y_hat = self.model(x)
+        text,label,inputs_ids,attention_mask = batch
+        y = label
+        y_hat = self.model(inputs_id=inputs_ids,attention_mask=attention_mask)
         loss = F.cross_entropy(y_hat, y)
         self.log('test_loss', loss)
         return loss

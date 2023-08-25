@@ -5,3 +5,7 @@ def get_tokenizer():
     return tokenizer
 
 print(llama_args.model_name)
+text = "I am a student"
+tokenizer = get_tokenizer()
+token = tokenizer(text)
+print(token)
