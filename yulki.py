@@ -18,3 +18,7 @@ print(st.replace('_', ' ').strip())
 a = [0]
 a += [1, 2, 3]
 print(a)
+
+import torch
+a = torch.ones(100,100).cuda()
+print(a)

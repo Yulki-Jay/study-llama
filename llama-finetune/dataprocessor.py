@@ -1,5 +1,5 @@
 from datasets import load_dataset
-from tokenizer import get_tokenizer,get_bert_tokenizer
+from tokenizer import get_tokenizer
 import torch.utils.data
 from transformers import DataCollatorWithPadding # 这个是用来进行动态padding的
 
@@ -12,20 +12,19 @@ class DataProcessor():
     def __init__(self):
         self.ds_name = 'dair-ai/emotion'
         self.ds = load_dataset(self.ds_name)
-        self.tokenizer = get_bert_tokenizer()
+        self.tokenizer = get_tokenizer()
         self.ds_maped = None
-        self.get_maped_dataset() # 获得map后的dataset
-        self.pad_token_id = self.tokenizer.pad_token_id
-        self.pad_token = self.tokenizer.pad_token
+        self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
+        self.tokenizer.pad_token = self.tokenizer.eos_token
         self.data_collator = DataCollatorWithPadding(tokenizer=self.tokenizer)
+        self.get_maped_dataset() # 获得map后的dataset,一定要在最下面执行，因为llama v2的tokenizer中没有pad_token_id，所以要在这里设置一下
     
     def encode(self,examples):
-        # tokenizer.pad_token = tokenizer.eos_token
         return self.tokenizer(examples["text"], truncation=True, padding=True)
     
     def get_maped_dataset(self):
         self.ds_maped = self.ds.map(self.encode,batched=True)
-        self.ds_maped.set_format(type='torch',columns=['input_ids','attention_mask','token_type_ids','label'])
+        self.ds_maped.set_format(type='torch',columns=['label','input_ids','attention_mask'])
         print('已经map了啊')
     
     def get_train_dataset(self):
