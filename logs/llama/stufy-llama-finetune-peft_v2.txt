@@ -1,0 +1,183 @@
+4张显卡跑代码
+node09               Tue Aug 29 16:05:32 2023  515.65.01
+[0] NVIDIA A40       | 44'C,   0 % |   573 / 46068 MB |
+[1] NVIDIA A40       | 45'C,   0 % |   573 / 46068 MB |
+[2] NVIDIA A40       | 43'C,   0 % |   573 / 46068 MB |
+[3] NVIDIA A40       | 43'C,   0 % |   573 / 46068 MB |
+开始加载模型
+开始加载模型
+开始加载模型
+开始加载模型
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.89s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 10.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.41s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.72s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 10.48s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 11.56s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 10.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.14s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 10.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.22s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/logger_connector/logger_connector.py:67: UserWarning: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `lightning.pytorch` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+  warning_cache.warn(
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A40') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 956, in _run
+    self.strategy.setup(self)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 164, in setup
+    self.configure_ddp()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in configure_ddp
+    self.model = self._setup_model(_LightningModuleWrapperBase(self.model))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 183, in _setup_model
+    return DistributedDataParallel(module=model, device_ids=device_ids, **self._ddp_kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 688, in __init__
+    self._ddp_init_helper(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 825, in _ddp_init_helper
+    self.reducer = dist.Reducer(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 66.00 MiB (GPU 1; 44.43 GiB total capacity; 43.46 GiB already allocated; 42.81 MiB free; 43.59 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 956, in _run
+    self.strategy.setup(self)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 164, in setup
+    self.configure_ddp()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in configure_ddp
+    self.model = self._setup_model(_LightningModuleWrapperBase(self.model))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 183, in _setup_model
+    return DistributedDataParallel(module=model, device_ids=device_ids, **self._ddp_kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 688, in __init__
+    self._ddp_init_helper(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 825, in _ddp_init_helper
+    self.reducer = dist.Reducer(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 66.00 MiB (GPU 3; 44.43 GiB total capacity; 43.46 GiB already allocated; 20.81 MiB free; 43.62 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 956, in _run
+    self.strategy.setup(self)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 164, in setup
+    self.configure_ddp()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in configure_ddp
+    self.model = self._setup_model(_LightningModuleWrapperBase(self.model))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 183, in _setup_model
+    return DistributedDataParallel(module=model, device_ids=device_ids, **self._ddp_kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 688, in __init__
+    self._ddp_init_helper(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 825, in _ddp_init_helper
+    self.reducer = dist.Reducer(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 172.00 MiB (GPU 0; 44.43 GiB total capacity; 43.53 GiB already allocated; 18.81 MiB free; 43.62 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 956, in _run
+    self.strategy.setup(self)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 164, in setup
+    self.configure_ddp()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in configure_ddp
+    self.model = self._setup_model(_LightningModuleWrapperBase(self.model))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 183, in _setup_model
+    return DistributedDataParallel(module=model, device_ids=device_ids, **self._ddp_kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 688, in __init__
+    self._ddp_init_helper(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 825, in _ddp_init_helper
+    self.reducer = dist.Reducer(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 172.00 MiB (GPU 2; 44.43 GiB total capacity; 43.53 GiB already allocated; 18.81 MiB free; 43.62 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+srun: error: node09: task 1: Exited with exit code 1
+srun: error: node09: task 3: Exited with exit code 1
+srun: error: node09: task 0: Exited with exit code 1
+srun: error: node09: task 2: Exited with exit code 1
+这个工作完成啦

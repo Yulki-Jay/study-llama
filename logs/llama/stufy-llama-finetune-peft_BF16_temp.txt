@@ -1,0 +1,1076 @@
+4张显卡跑代码
+node30               Tue Aug 29 15:07:58 2023  515.65.01
+[0] NVIDIA A40       | 58'C,   0 % |   573 / 46068 MB |
+[1] NVIDIA A40       | 58'C,   0 % |   573 / 46068 MB |
+[2] NVIDIA A40       | 53'C,   0 % |   573 / 46068 MB |
+[3] NVIDIA A40       | 55'C,   0 % |   573 / 46068 MB |
+开始加载模型
+开始加载模型
+开始加载模型
+开始加载模型
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.46s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00,  9.99s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.96s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 10.10s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.15s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 10.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:22<00:00, 11.31s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00,  9.92s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:21<00:00, 10.97s/it]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /home/jiangyunqi/study/study-llama/llama-finetune/llama-2-7b and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/fabric/connector.py:554: UserWarning: bf16 is supported for historical reasons but its usage is discouraged. Please set your precision to bf16-mixed instead!
+  rank_zero_warn(
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/logger_connector/logger_connector.py:67: UserWarning: Starting from v1.9.0, `tensorboardX` has been removed as a dependency of the `lightning.pytorch` package, due to potential conflicts with other packages in the ML ecosystem. For this reason, `logger=True` will use `CSVLogger` as the default logger, unless the `tensorboard` or `tensorboardX` packages are found. Please `pip install lightning[extra]` or one of them to enable TensorBoard support by default
+  warning_cache.warn(
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/4
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/4
+Using the latest cached version of the module from /home/jiangyunqi/.cache/huggingface/modules/datasets_modules/datasets/dair-ai--emotion/cca5efe2dfeb58c1d098e0f9eeb200e9927d889b5a03c67097275dfb5fe463bd (last modified on Fri Aug 25 13:45:14 2023) since it couldn't be found locally at dair-ai/emotion., or remotely on the Hugging Face Hub.
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/4
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 4 processes
+----------------------------------------------------------------------------------------------------
+
+You are using a CUDA device ('NVIDIA A40') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3]
+
+  | Name  | Type                               | Params
+-------------------------------------------------------------
+0 | model | PeftModelForSequenceClassification | 6.6 B 
+-------------------------------------------------------------
+4.2 M     Trainable params
+6.6 B     Non-trainable params
+6.6 B     Total params
+26,446.348Total estimated model params size (MB)
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+SLURM auto-requeueing enabled. Setting signal handlers.
+trainable params: 4,243,468 || all params: 6,611,587,084 || trainable%: 0.06418229006268655
+PeftModelForSequenceClassification(
+  (base_model): LoraModel(
+    (model): LlamaForSequenceClassification(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (score): ModulesToSaveWrapper(
+        (original_module): Linear(in_features=4096, out_features=6, bias=True)
+        (modules_to_save): ModuleDict(
+          (default): Linear(in_features=4096, out_features=6, bias=True)
+        )
+      )
+    )
+  )
+)
+MyLLamaModel(
+  (model): PeftModelForSequenceClassification(
+    (base_model): LoraModel(
+      (model): LlamaForSequenceClassification(
+        (model): LlamaModel(
+          (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+          (layers): ModuleList(
+            (0-31): 32 x LlamaDecoderLayer(
+              (self_attn): LlamaAttention(
+                (q_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (v_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (rotary_emb): LlamaRotaryEmbedding()
+              )
+              (mlp): LlamaMLP(
+                (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+                (act_fn): SiLUActivation()
+              )
+              (input_layernorm): LlamaRMSNorm()
+              (post_attention_layernorm): LlamaRMSNorm()
+            )
+          )
+          (norm): LlamaRMSNorm()
+        )
+        (score): ModulesToSaveWrapper(
+          (original_module): Linear(in_features=4096, out_features=6, bias=True)
+          (modules_to_save): ModuleDict(
+            (default): Linear(in_features=4096, out_features=6, bias=True)
+          )
+        )
+      )
+    )
+  )
+)
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+{'label': tensor(0), 'input_ids': tensor([    1,   474,  5360,  4344,   269, 12845, 15717,  1058,  1016,   260,
+         4459,   278,   817,   304,   270,  3774,  1623,  2712,   363,   413,
+         4841,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2]), 'attention_mask': tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0])}
+trainable params: 4,243,468 || all params: 6,611,587,084 || trainable%: 0.06418229006268655
+PeftModelForSequenceClassification(
+  (base_model): LoraModel(
+    (model): LlamaForSequenceClassification(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (score): ModulesToSaveWrapper(
+        (original_module): Linear(in_features=4096, out_features=6, bias=True)
+        (modules_to_save): ModuleDict(
+          (default): Linear(in_features=4096, out_features=6, bias=True)
+        )
+      )
+    )
+  )
+)
+MyLLamaModel(
+  (model): PeftModelForSequenceClassification(
+    (base_model): LoraModel(
+      (model): LlamaForSequenceClassification(
+        (model): LlamaModel(
+          (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+          (layers): ModuleList(
+            (0-31): 32 x LlamaDecoderLayer(
+              (self_attn): LlamaAttention(
+                (q_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (v_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (rotary_emb): LlamaRotaryEmbedding()
+              )
+              (mlp): LlamaMLP(
+                (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+                (act_fn): SiLUActivation()
+              )
+              (input_layernorm): LlamaRMSNorm()
+              (post_attention_layernorm): LlamaRMSNorm()
+            )
+          )
+          (norm): LlamaRMSNorm()
+        )
+        (score): ModulesToSaveWrapper(
+          (original_module): Linear(in_features=4096, out_features=6, bias=True)
+          (modules_to_save): ModuleDict(
+            (default): Linear(in_features=4096, out_features=6, bias=True)
+          )
+        )
+      )
+    )
+  )
+)
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+{'label': tensor(0), 'input_ids': tensor([    1,   474,  5360,  4344,   269, 12845, 15717,  1058,  1016,   260,
+         4459,   278,   817,   304,   270,  3774,  1623,  2712,   363,   413,
+         4841,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2]), 'attention_mask': tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0])}
+trainable params: 4,243,468 || all params: 6,611,587,084 || trainable%: 0.06418229006268655
+PeftModelForSequenceClassification(
+  (base_model): LoraModel(
+    (model): LlamaForSequenceClassification(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (score): ModulesToSaveWrapper(
+        (original_module): Linear(in_features=4096, out_features=6, bias=True)
+        (modules_to_save): ModuleDict(
+          (default): Linear(in_features=4096, out_features=6, bias=True)
+        )
+      )
+    )
+  )
+)
+MyLLamaModel(
+  (model): PeftModelForSequenceClassification(
+    (base_model): LoraModel(
+      (model): LlamaForSequenceClassification(
+        (model): LlamaModel(
+          (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+          (layers): ModuleList(
+            (0-31): 32 x LlamaDecoderLayer(
+              (self_attn): LlamaAttention(
+                (q_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (v_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+trainable params: 4,243,468 || all params: 6,611,587,084 || trainable%: 0.06418229006268655
+PeftModelForSequenceClassification(
+  (base_model): LoraModel(
+    (model): LlamaForSequenceClassification(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (v_proj): Linear(
+                in_features=4096, out_features=4096, bias=False
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+              (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+              (act_fn): SiLUActivation()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (score): ModulesToSaveWrapper(
+        (original_module): Linear(in_features=4096, out_features=6, bias=True)
+        (modules_to_save): ModuleDict(
+          (default): Linear(in_features=4096, out_features=6, bias=True)
+        )
+      )
+    )
+  )
+)
+MyLLamaModel(
+  (model): PeftModelForSequenceClassification(
+    (base_model): LoraModel(
+      (model): LlamaForSequenceClassification(
+        (model): LlamaModel(
+          (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+          (layers): ModuleList(
+            (0-31): 32 x LlamaDecoderLayer(
+              (self_attn): LlamaAttention(
+                (q_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (v_proj): Linear(
+                  in_features=4096, out_features=4096, bias=False
+                  (lora_dropout): ModuleDict(
+                    (default): Dropout(p=0.05, inplace=False)
+                  )
+                  (lora_A): ModuleDict(
+                    (default): Linear(in_features=4096, out_features=8, bias=False)
+                  )
+                  (lora_B): ModuleDict(
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (rotary_emb): LlamaRotaryEmbedding()
+              )
+              (mlp): LlamaMLP(
+                (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+                (act_fn): SiLUActivation()
+              )
+              (input_layernorm): LlamaRMSNorm()
+              (post_attention_layernorm): LlamaRMSNorm()
+            )
+          )
+          (norm): LlamaRMSNorm()
+        )
+        (score): ModulesToSaveWrapper(
+          (original_module): Linear(in_features=4096, out_features=6, bias=True)
+          (modules_to_save): ModuleDict(
+            (default): Linear(in_features=4096, out_features=6, bias=True)
+          )
+        )
+      )
+    )
+  )
+)
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+{'label': tensor(0), 'input_ids': tensor([    1,   474,  5360,  4344,   269, 12845, 15717,  1058,  1016,   260,
+         4459,   278,   817,   304,   270,  3774,  1623,  2712,   363,   413,
+         4841,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2]), 'attention_mask': tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0])}
+                    (default): Linear(in_features=8, out_features=4096, bias=False)
+                  )
+                  (lora_embedding_A): ParameterDict()
+                  (lora_embedding_B): ParameterDict()
+                )
+                (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+                (rotary_emb): LlamaRotaryEmbedding()
+              )
+              (mlp): LlamaMLP(
+                (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+                (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+                (act_fn): SiLUActivation()
+              )
+              (input_layernorm): LlamaRMSNorm()
+              (post_attention_layernorm): LlamaRMSNorm()
+            )
+          )
+          (norm): LlamaRMSNorm()
+        )
+        (score): ModulesToSaveWrapper(
+          (original_module): Linear(in_features=4096, out_features=6, bias=True)
+          (modules_to_save): ModuleDict(
+            (default): Linear(in_features=4096, out_features=6, bias=True)
+          )
+        )
+      )
+    )
+  )
+)
+模型获取成功
+**************************************************
+数据开始加载
+已经map了啊
+数据加载成功
+**************************************************
+模型开始训练
+{'label': tensor(0), 'input_ids': tensor([    1,   474,  5360,  4344,   269, 12845, 15717,  1058,  1016,   260,
+         4459,   278,   817,   304,   270,  3774,  1623,  2712,   363,   413,
+         4841,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+            2,     2,     2,     2,     2,     2,     2]), 'attention_mask': tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0])}
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:486: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test dataloaders.
+  rank_zero_warn(
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:438: PossibleUserWarning: The dataloader, val_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 72 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Sanity Checking: 0it [00:00, ?it/s]Sanity Checking:   0%|          | 0/1 [00:00<?, ?it/s]Sanity Checking DataLoader 0:   0%|          | 0/1 [00:00<?, ?it/s]y=torch.Size([16]),y_hat=torch.Size([16, 6])
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/logger_connector/result.py:433: PossibleUserWarning: It is recommended to use `self.log('val_loss', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+  warning_cache.warn(
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/logger_connector/result.py:433: PossibleUserWarning: It is recommended to use `self.log('val_acc', ..., sync_dist=True)` when logging on epoch level in distributed setting to accumulate the metric across devices.
+  warning_cache.warn(
+y=torch.Size([16]),y_hat=torch.Size([16, 6])
+y=torch.Size([16]),y_hat=torch.Size([16, 6])
+y=torch.Size([16]),y_hat=torch.Size([16, 6])
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:438: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 72 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py:281: PossibleUserWarning: The number of training batches (5) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 202, in run
+    self.advance()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 355, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 219, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 188, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 266, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 145, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/module.py", line 1270, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/optimizer.py", line 161, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 257, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/strategy.py", line 231, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/amp.py", line 73, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 116, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/adam.py", line 121, in step
+    loss = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 103, in _wrap_closure
+    closure_result = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 142, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 128, in closure
+    step_output = self._step_fn()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 293, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 330, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/overrides/base.py", line 90, in forward
+    output = self._forward_module.training_step(*inputs, **kwargs)
+  File "/fs1/private/user/jiangyunqi/study/study-llama/llama-finetune/llama_v2_emotion_model.py", line 31, in training_step
+    y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/peft_model.py", line 732, in forward
+    return self.base_model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 948, in forward
+    transformer_outputs = self.model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 697, in forward
+    layer_outputs = decoder_layer(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 426, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 220, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 28.00 MiB (GPU 2; 44.43 GiB total capacity; 42.73 GiB already allocated; 10.81 MiB free; 43.27 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 202, in run
+    self.advance()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 355, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 219, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 188, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 266, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 145, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/module.py", line 1270, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/optimizer.py", line 161, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 257, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/strategy.py", line 231, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/amp.py", line 73, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 116, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/adam.py", line 121, in step
+    loss = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 103, in _wrap_closure
+    closure_result = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 142, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 128, in closure
+    step_output = self._step_fn()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 293, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 330, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/overrides/base.py", line 90, in forward
+    output = self._forward_module.training_step(*inputs, **kwargs)
+  File "/fs1/private/user/jiangyunqi/study/study-llama/llama-finetune/llama_v2_emotion_model.py", line 31, in training_step
+    y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/peft_model.py", line 732, in forward
+    return self.base_model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 948, in forward
+    transformer_outputs = self.model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 697, in forward
+    layer_outputs = decoder_layer(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 426, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 220, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB (GPU 3; 44.43 GiB total capacity; 42.98 GiB already allocated; 40.81 MiB free; 43.24 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 202, in run
+    self.advance()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 355, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 219, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 188, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 266, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 145, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/module.py", line 1270, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/optimizer.py", line 161, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 257, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/strategy.py", line 231, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/amp.py", line 73, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 116, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/adam.py", line 121, in step
+    loss = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 103, in _wrap_closure
+    closure_result = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 142, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 128, in closure
+    step_output = self._step_fn()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 293, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 330, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/overrides/base.py", line 90, in forward
+    output = self._forward_module.training_step(*inputs, **kwargs)
+  File "/fs1/private/user/jiangyunqi/study/study-llama/llama-finetune/llama_v2_emotion_model.py", line 31, in training_step
+    y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/peft_model.py", line 732, in forward
+    return self.base_model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 948, in forward
+    transformer_outputs = self.model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 697, in forward
+    layer_outputs = decoder_layer(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 413, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 312, in forward
+    value_states = self.v_proj(hidden_states)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/lora.py", line 908, in forward
+    self.lora_A[self.active_adapter](self.lora_dropout[self.active_adapter](x))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/dropout.py", line 59, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/functional.py", line 1252, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB (GPU 1; 44.43 GiB total capacity; 43.00 GiB already allocated; 8.81 MiB free; 43.27 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Traceback (most recent call last):
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 46, in <module>
+    main()
+  File "/home/jiangyunqi/study/study-llama/llama-finetune/main.py", line 38, in main
+    trainer.fit(model, train_dataloaders=dataprocessor.get_train_dataloader(), val_dataloaders=dataprocessor.get_val_dataloader())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 532, in fit
+    call._call_and_handle_interrupt(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 42, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 93, in launch
+    return function(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 571, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 980, in _run
+    results = self._run_stage()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/trainer.py", line 1023, in _run_stage
+    self.fit_loop.run()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 202, in run
+    self.advance()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/fit_loop.py", line 355, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 133, in run
+    self.advance(data_fetcher)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 219, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 188, in run
+    self._optimizer_step(kwargs.get("batch_idx", 0), closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 266, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 145, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/module.py", line 1270, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/core/optimizer.py", line 161, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 257, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/strategy.py", line 231, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/amp.py", line 73, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 116, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/optimizer.py", line 33, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/optim/adam.py", line 121, in step
+    loss = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/plugins/precision/precision_plugin.py", line 103, in _wrap_closure
+    closure_result = closure()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 142, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 128, in closure
+    step_output = self._step_fn()
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 315, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/trainer/call.py", line 293, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/strategies/ddp.py", line 330, in training_step
+    return self.model(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/lightning/pytorch/overrides/base.py", line 90, in forward
+    output = self._forward_module.training_step(*inputs, **kwargs)
+  File "/fs1/private/user/jiangyunqi/study/study-llama/llama-finetune/llama_v2_emotion_model.py", line 31, in training_step
+    y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/peft_model.py", line 732, in forward
+    return self.base_model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/tuners_utils.py", line 94, in forward
+    return self.model.forward(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 948, in forward
+    transformer_outputs = self.model(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 697, in forward
+    layer_outputs = decoder_layer(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 413, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 312, in forward
+    value_states = self.v_proj(hidden_states)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/peft/tuners/lora.py", line 908, in forward
+    self.lora_A[self.active_adapter](self.lora_dropout[self.active_adapter](x))
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/modules/dropout.py", line 59, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/jiangyunqi/anaconda3/envs/study-llama-v2-finetune/lib/python3.9/site-packages/torch/nn/functional.py", line 1252, in dropout
+    return _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 22.00 MiB (GPU 0; 44.43 GiB total capacity; 43.00 GiB already allocated; 8.81 MiB free; 43.27 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+Sanity Checking DataLoader 0: 100%|██████████| 1/1 [00:01<00:00,  1.48s/it]                                                                           Training: 0it [00:00, ?it/s]Training:   0%|          | 0/5 [00:00<?, ?it/s]Epoch 0:   0%|          | 0/5 [00:00<?, ?it/s] Epoch 0:   0%|          | 0/5 [00:20<?, ?it/s]
+srun: error: node30: tasks 2-3: Exited with exit code 1
+srun: error: node30: task 1: Exited with exit code 1
+srun: error: node30: task 0: Exited with exit code 1
+这个工作完成啦
