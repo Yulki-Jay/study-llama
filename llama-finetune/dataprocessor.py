@@ -2,7 +2,7 @@ from datasets import load_dataset
 from tokenizer import get_tokenizer
 import torch.utils.data
 from transformers import DataCollatorWithPadding # 这个是用来进行动态padding的
-
+import llama_args
 
 '''
 直接封装到类里面，就不会出现数据不一致的问题了
@@ -38,10 +38,10 @@ class DataProcessor():
 
     def get_train_dataloader(self):
         train_ds = self.get_train_dataset()
-        print(train_ds[500])
+        # print(train_ds[500])
         train_dataloader = torch.utils.data.DataLoader(
             dataset=train_ds,
-            batch_size=128,
+            batch_size=llama_args.train_bsz,
             num_workers=1,
             pin_memory=True,
             drop_last=True,
@@ -55,7 +55,7 @@ class DataProcessor():
         val_ds = self.get_val_dataset()
         val_dataloader = torch.utils.data.DataLoader(
             dataset=val_ds,
-            batch_size=128,
+            batch_size=llama_args.val_bsz,
             num_workers=1,
             pin_memory=True,
             drop_last=True,
@@ -68,7 +68,7 @@ class DataProcessor():
         test_ds = self.get_val_dataset()
         test_dataloader = torch.utils.data.DataLoader(
             dataset=test_ds,
-            batch_size=128,
+            batch_size=llama_args.test_bsz,
             num_workers=1,
             pin_memory=True,
             drop_last=True,
@@ -92,8 +92,8 @@ def main():
     dataprocessor = DataProcessor()
     train_dataloader = dataprocessor.get_train_dataloader()
     batch = next(iter(train_dataloader))
-    print(batch.keys())
-    print(type(batch['input_ids']))
+    # print(batch.keys())
+    # print(type(batch['input_ids']))
     # print(dataprocessor.pad_token_id)
     # print(dataprocessor.ds.features['label'].names)
 if __name__ == '__main__':

@@ -7,6 +7,8 @@ from transformers import LlamaForSequenceClassification, LlamaConfig, LlamaToken
 import llama_args
 import  torch.nn as nn
 from peft import get_peft_model, prepare_model_for_int8_training,LoraConfig
+from torch.cuda.amp import autocast
+# scaler = torch.cuda.amp.GradScaler()
 
 '''
 Llama 模型现在有问题，原版的llama并不支持seq classification 需要进行修改一下
@@ -28,10 +30,11 @@ class MyLLamaModel(pl.LightningModule):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
         # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-        print(f"y={y.shape},y_hat={y_hat.logits.shape}")
-        loss = F.cross_entropy(y_hat.logits, y)
-        self.log('train_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        with autocast():
+            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+            # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
+            loss = F.cross_entropy(y_hat.logits, y)
+            self.log('train_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('train_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
@@ -40,10 +43,11 @@ class MyLLamaModel(pl.LightningModule):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
         # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-        print(f"y={y.shape},y_hat={y_hat.logits.shape}")
-        loss = F.cross_entropy(y_hat.logits, y)
-        self.log('val_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        with autocast():
+            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+            # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
+            loss = F.cross_entropy(y_hat.logits, y)
+            self.log('val_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('val_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
@@ -51,10 +55,11 @@ class MyLLamaModel(pl.LightningModule):
     def test_step(self,batch, batch_idx):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
-        y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-        loss = F.cross_entropy(y_hat.logits, y)
-        self.log('test_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
+        with autocast():
+            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+            loss = F.cross_entropy(y_hat.logits, y)
+            self.log('test_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('test_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
@@ -66,11 +71,12 @@ class MyLLamaModel(pl.LightningModule):
         preds = torch.argmax(logits, dim=-1)
         return torch.tensor(torch.sum(preds == labels).item() / len(preds))
 
+
 def get_LLama_model(model_name): # 获得院士的llama模型，并且封装到pytorch lightning中
     model = LlamaForSequenceClassification.from_pretrained(model_name)
-    infeatures = model.lm_head.in_features
+    infeatures = model.score.in_features
     outfeatures = llama_args.num_labels
-    model.lm_head = nn.Linear(infeatures,outfeatures)
+    model.score = nn.Linear(infeatures,outfeatures)
     my_model = MyLLamaModel(model)
     return my_model
 
@@ -88,13 +94,13 @@ def get_peft_config(): # 获得peft的config 这里面用的是lora config
 
 def get_peft_LLama_model(model_name): # 获得peft的模型
     model = LlamaForSequenceClassification.from_pretrained(model_name)
-    infeatures = model.lm_head.in_features
+    infeatures = model.score.in_features
     outfeatures = llama_args.num_labels
-    model.lm_head = nn.Linear(infeatures,outfeatures)
+    model.score = nn.Linear(infeatures,outfeatures)
     config = get_peft_config()
     model = get_peft_model(model,config)
     model.print_trainable_parameters()
-    print(model)
+    # print(model)
     my_model = MyLLamaModel(model)
     return my_model
 
@@ -102,7 +108,7 @@ def get_peft_LLama_model(model_name): # 获得peft的模型
 def main():
     # model = get_LLama_model()
     # print(model)
-    model2 = get_peft_LLama_model(llama_args.model_name)
+    model2 = get_LLama_model(llama_args.model_name)
     print(model2)
     
 if __name__ == '__main__':
