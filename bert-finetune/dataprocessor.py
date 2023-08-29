@@ -69,7 +69,7 @@ class DataProcessor():
         test_ds = self.get_val_dataset()
         test_dataloader = torch.utils.data.DataLoader(
             dataset=test_ds,
-            batch_size=512,
+            batch_size=256,
             num_workers=1,
             pin_memory=True,
             drop_last=True,
