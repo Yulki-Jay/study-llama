@@ -1,6 +1,6 @@
 # study-llama
 
-这是一个在 dair-ai/emotion' 微调的仓库
+这是一个在 [dair-ai/emotion](https://huggingface.co/datasets/dair-ai/emotion) 微调的仓库
 分别使用了bert以及lora进行微调
 bert+lora
 |  test metric   |   |
