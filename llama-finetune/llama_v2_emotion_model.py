@@ -30,11 +30,11 @@ class MyLLamaModel(pl.LightningModule):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
         # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        with autocast():
-            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-            # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
-            loss = F.cross_entropy(y_hat.logits, y)
-            self.log('train_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        # with autocast():
+        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+        # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
+        loss = F.cross_entropy(y_hat.logits, y)
+        self.log('train_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('train_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
@@ -43,11 +43,11 @@ class MyLLamaModel(pl.LightningModule):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
         # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        with autocast():
-            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-            # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
-            loss = F.cross_entropy(y_hat.logits, y)
-            self.log('val_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        # with autocast():
+        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+        # print(f"y={y.shape},y_hat={y_hat.logits.shape}")
+        loss = F.cross_entropy(y_hat.logits, y)
+        self.log('val_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('val_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
@@ -56,10 +56,10 @@ class MyLLamaModel(pl.LightningModule):
         labels,input_ids,attention_mask= batch['labels'],batch['input_ids'],batch['attention_mask']
         y = labels
         # y = torch.nn.functional.one_hot(y, num_classes=llama_args.num_labels)  # 将 y 转换为独热编码
-        with autocast():
-            y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
-            loss = F.cross_entropy(y_hat.logits, y)
-            self.log('test_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
+        # with autocast():
+        y_hat = self.model(input_ids=input_ids,attention_mask=attention_mask)
+        loss = F.cross_entropy(y_hat.logits, y)
+        self.log('test_loss', loss,on_step=True,on_epoch=True,prog_bar=True)
         acc = self.compute_accuracy(y_hat.logits, y)
         self.log('test_acc', acc,on_step=True,on_epoch=True,prog_bar=True)
         return loss
