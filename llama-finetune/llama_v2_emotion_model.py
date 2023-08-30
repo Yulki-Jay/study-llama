@@ -3,7 +3,7 @@ from lightning.pytorch.utilities.types import STEP_OUTPUT
 import torch
 import lightning.pytorch as pl
 import torch.nn.functional as F
-from transformers import LlamaForSequenceClassification, LlamaConfig, LlamaTokenizer
+from transformers import LlamaForSequenceClassification, LlamaConfig, LlamaTokenizer,LlamaForCausalLM
 import llama_args
 import  torch.nn as nn
 from peft import get_peft_model, prepare_model_for_int8_training,LoraConfig
@@ -73,6 +73,7 @@ class MyLLamaModel(pl.LightningModule):
 
 
 def get_LLama_model(model_name): # 获得院士的llama模型，并且封装到pytorch lightning中
+    # model = LlamaForSequenceClassification.from_pretrained(model_name,load_in_8bit=llama_args.load_in_8bit, device_map='auto',torch_dtype=llama_args.torch_dtype)
     model = LlamaForSequenceClassification.from_pretrained(model_name)
     infeatures = model.score.in_features
     outfeatures = llama_args.num_labels
@@ -93,6 +94,7 @@ def get_peft_config(): # 获得peft的config 这里面用的是lora config
 
 
 def get_peft_LLama_model(model_name): # 获得peft的模型
+    # model = LlamaForSequenceClassification.from_pretrained(model_name,load_in_8bit=llama_args.load_in_8bit, device_map='auto',torch_dtype=llama_args.torch_dtype)
     model = LlamaForSequenceClassification.from_pretrained(model_name)
     infeatures = model.score.in_features
     outfeatures = llama_args.num_labels
@@ -108,8 +110,9 @@ def get_peft_LLama_model(model_name): # 获得peft的模型
 def main():
     # model = get_LLama_model()
     # print(model)
-    model2 = get_LLama_model(llama_args.model_name)
-    print(model2)
+    model2 = get_peft_LLama_model(llama_args.model_name)
+    # print([name for name, param in model2.named_parameters() if param.requires_grad])
+    # print(model2)
     
 if __name__ == '__main__':
     main()
