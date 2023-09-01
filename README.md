@@ -1,7 +1,11 @@
 # study-llama
 
-这是一个在 [dair-ai/emotion](https://huggingface.co/datasets/dair-ai/emotion) 微调的仓库
-分别使用了bert以及lora进行微调
+这是一个在 [dair-ai/emotion](https://huggingface.co/datasets/dair-ai/emotion) 微调的仓库<br>
+使用设备：使用了4张A40(40G显存)进行微调<br>
+分别使用了bert以及llama进行微调，并且同时测试了增加lora的情况，以下结果都没有使用量化（因为我加量化报错了,详见下述问题说明），在不使用lora的情况下，llama 7B v2会爆显存<br><br>
+Notice:请将llama v2 7b权重文件夹，放入llama-finetune文件夹下，并重命名为`llama-2-7b`
+
+## 结果对比<br>
 bert+lora
 |  test metric   |   |
 |  ----  | ----  |
